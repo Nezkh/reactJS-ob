@@ -3,7 +3,6 @@ import './App.css';
 import Greeting from './components/pure/greeting';
 import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list';
-import ContactComponent from './components/container/contact';
 
 function App() {
   return (
@@ -18,9 +17,7 @@ function App() {
           
           {/* Componente de Listado de tareas */}
           {/* <TaskListComponent></TaskListComponent> */}
-
-          {/* Componente de Contacto (ejercicio1) */}
-          <ContactComponent></ContactComponent>
+          
       </header>
     </div>
   );
