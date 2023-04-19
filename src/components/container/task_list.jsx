@@ -3,6 +3,9 @@ import { Task } from '../../models/tast.class';
 import { LEVELS } from '../../models/levels.enum';
 import TaskComponent from '../pure/task';
 
+// Importamos la hoja de estilos de task.scss
+import '../../styles/task.scss'
+
 const TaskListComponent = () => {
     
     const defaultTask = new Task('Example', 'Default description', false, LEVELS.NORMAL);
