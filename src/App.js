@@ -41,11 +41,11 @@ function App() {
           {/* GreetingStled se agrega */}
           {/* <GreetingStyled name="Francisco"></GreetingStyled> */}
 
-          {/* Componente de Listado de tareas */}
-          {/* <TaskListComponent></TaskListComponent> */}
+          {/* Gestión de eventos - Father n Child */}
+          {/* <Father></Father> */}
 
-          {/* Gestión de eventos */}
-          <Father></Father>
+          {/* Componente de Listado de tareas */}
+          <TaskListComponent></TaskListComponent>
       {/* </header> */}
     </div>
   );

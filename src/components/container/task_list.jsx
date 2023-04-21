@@ -5,7 +5,7 @@ import TaskComponent from '../pure/task';
 
 // Importamos la hoja de estilos de task.scss
 import '../../styles/task.scss'
-import TaskForms from '../pure/forms/taskForms';
+import TaskForms from '../pure/forms/taskForm';
 
 const TaskListComponent = () => {
     
@@ -26,8 +26,29 @@ const TaskListComponent = () => {
         };
     }, [tasks]);
     
-    const changeCompleted = (id)  => {
-        console.log('TODO: Cambiar estado de una tarea')
+    function completeTask(task){
+        console.log('Complete this Task: ', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks[index].completed = !tempTasks[index].completed;
+        // We update the state of the component with the new list of tasks and it will update the interetion of the tasks in order to show the task updated
+        setTasks(tempTasks);
+    }
+
+    function deleteTask(task){
+        console.log('Complete this Task: ', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.splice(index,1);
+        setTasks(tempTasks);
+    }
+
+    function addTask(task){
+        console.log('Complete this Task: ', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.push(task);
+        setTasks(tempTasks);
     }
 
     return (
@@ -57,6 +78,8 @@ const TaskListComponent = () => {
                                         <TaskComponent
                                         key={index}
                                         task={task}
+                                        complete={completeTask}
+                                        remove={deleteTask}
                                         >
                                         </TaskComponent>
                                         )
@@ -65,9 +88,9 @@ const TaskListComponent = () => {
                             </tbody>
                         </table>
                     </div>
-                    <TaskForms></TaskForms>
                 </div>
             </div>
+                    <TaskForms add={addTask} ></TaskForms>
         </div>
     );
 }
