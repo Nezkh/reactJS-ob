@@ -8,6 +8,7 @@ import Ejemplo2 from './hooks/Ejemplo2';
 import MicomponenteConContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './components/pure/greetingStyled';
+import Father from './components/container/father';
 
 function App() {
   return (
@@ -19,9 +20,6 @@ function App() {
           
           {/* Componente de ejemplo funcional */}
           {/* <GreetingF name="Francisco"></GreetingF> */}
-          
-          {/* Componente de Listado de tareas */}
-          <TaskListComponent></TaskListComponent>
 
           {/* Ejemplo1 de uso de HOOKS */}
           {/* <Ejemplo1></Ejemplo1> */}
@@ -43,6 +41,11 @@ function App() {
           {/* GreetingStled se agrega */}
           {/* <GreetingStyled name="Francisco"></GreetingStyled> */}
 
+          {/* Componente de Listado de tareas */}
+          {/* <TaskListComponent></TaskListComponent> */}
+
+          {/* Gestión de eventos */}
+          <Father></Father>
       {/* </header> */}
     </div>
   );
