@@ -1,0 +1,59 @@
+.h1-title {
+    color: #F08080;
+    font-weight: bold;
+    font-size: 4rem;
+    
+}
+
+form{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+Modal{
+    background-color: black;
+}
+
+.modal-header{
+    padding: 20px;
+
+    h1{
+        color: #F08080;
+        font-weight: bold;
+        font-size: 2.4rem;
+    }
+}
+
+.inserInp{    
+    position: relative;
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+
+    input{
+        border-radius: 5px;
+        border: 1.2px #F4978E solid;
+    
+    }
+
+    select{
+        gap: 0px;
+        border-radius: 5px;
+        border: 1.2px #F4978E solid;
+    }
+
+    label{
+        gap: 0px;
+    }
+
+}
+
+.btnStyle{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+    
+}

@@ -3,6 +3,7 @@ import { Contact } from '../../models/contact-class';
 import { useState } from 'react';
 import ContactComponent from '../pure/contact';
 import ContactForm from '../pure/forms/contactForm';
+import '../../styles/contact-styles.scss'
 
 const ContactListComponent = () => {
 
@@ -34,9 +35,9 @@ const ContactListComponent = () => {
 
     return (
         <div>
-            <h1>Ejercicio Contacto</h1>
+            <h1 className='h1-title'>List of Contacts</h1>
             <div>
-                <table>
+                <table className='table'>
                     <thead>
                         <tr>
                             <th scope='col'>Name</th>
