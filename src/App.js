@@ -9,6 +9,7 @@ import MicomponenteConContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
+import ContactListComponent from './components/container/contactComponent';
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
           {/* <Father></Father> */}
 
           {/* Componente de Listado de tareas */}
-          <TaskListComponent></TaskListComponent>
+          {/* <TaskListComponent></TaskListComponent> */}
+          <ContactListComponent></ContactListComponent>
       {/* </header> */}
     </div>
   );
