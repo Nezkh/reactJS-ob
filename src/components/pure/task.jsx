@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Task } from '../../models/tast.class';
+import { Task } from '../../models/task.class';
 // Importamos la hoja de estilos de task.scss
 import '../../styles/task.scss'
 import { LEVELS } from '../../models/levels.enum';

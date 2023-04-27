@@ -1,5 +1,5 @@
 import React, { useEffect, useState }  from 'react';
-import { Task } from '../../models/tast.class';
+import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
 import TaskComponent from '../pure/task';
 
