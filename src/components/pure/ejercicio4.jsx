@@ -7,7 +7,9 @@ class Ejercicio4 extends Component {
     constructor(props){
         super(props);
         this.state = {
-            count: 0,
+            red: 0,
+            green: 0,
+            blue: 0,
             intervalID: null,
         }
     }
@@ -15,23 +17,26 @@ class Ejercicio4 extends Component {
     mouseContentEnter = () => {
         this.timer = setInterval(() => {
             this.setState((prevState) =>({
-                count: prevState.count + 1,
+                red: Math.floor(Math.random() * 256),
+                green: Math.floor(Math.random() * 256),
+                blue: Math.floor(Math.random() * 256),
             }));
         }, 1000);
-        console.log('dentro del contenedor')
-        
     }
 
     mouseContentLeave = () =>{
         clearInterval(this.timer);
-        console.log('Saliendo del contenedor')
     }
 
+    stopColorChange = (event) => {
+        event.preventDefault();
+        clearInterval(this.timer);
+      }
+
     render() {
-        const { count } = this.state
+        const { red, green, blue } = this.state
         return (
-            <div style={{height:'255px', width:'255px', backgroundColor:'black'}} onMouseEnter={this.mouseContentEnter} onMouseLeave={this.mouseContentLeave}>
-                <p style={{color: 'white'}}>Contador: { count} </p>
+            <div style={{height:'255px', width:'255px', backgroundColor: `rgb(${red},${green},${blue})`}} onMouseEnter={this.mouseContentEnter} onMouseLeave={this.mouseContentLeave} onDoubleClick={ this.stopColorChange }>
             </div>
         );
     }
