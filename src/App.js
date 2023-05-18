@@ -44,7 +44,7 @@ function App() {
           {/* Gestión de eventos - Father n Child */}
           {/* <Father></Father> */}
 
-          {/* Componente de Listado de tareas */}
+          {/* Proyecto Final */}
           <TaskListComponent></TaskListComponent>
       {/* </header> */}
     </div>
