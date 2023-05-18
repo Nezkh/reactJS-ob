@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { LEVELS } from '../../../models/levels.enum';
 import { Task } from '../../../models/task.class';
 
-const TaskForm = ({add}) => {
+const TaskForm = ({add, length}) => {
 
     const nameRef = useRef('');
     const descriptionRef = useRef('');
@@ -25,8 +25,8 @@ const TaskForm = ({add}) => {
             <div className='form-outline flex-fill mt-2'>
                 <input ref={nameRef} id='inputName' type='text' className='form-control fomr-control-lg mb-2' required autoFocus placeholder='Task Name'/>
                 <input ref={descriptionRef} id='inputDescription' type='text' className='form-control fomr-control-lg mb-2' required placeholder='Task Description'/>
-                <label htmlFor='selectLevel' className='sr-only me-2' >Priority</label>
-                <select ref={levelRef} defaultValue={LEVELS.NORMAL} id='selectLevel'>
+                {/* <label htmlFor='selectLevel' className='sr-only me-2' >Priority</label> */}
+                <select className='form-control fomr-control-lg mb-2' ref={levelRef} defaultValue={LEVELS.NORMAL} id='selectLevel'>
                     <option value={LEVELS.NORMAL}>
                         Normal
                     </option>
@@ -37,14 +37,17 @@ const TaskForm = ({add}) => {
                         Blocking
                     </option>
                 </select>
+                <button type='submit' className='btn btn-success btn-lg ms-2'>
+                    {length > 0 ? 'Add New Task' : 'Create your First Task' }
+                </button>
             </div>
-            <button type='submit' className='btn btn-success btn-lg ms-2'>Add</button>
         </form>
     );
 }
 
 TaskForm.ProtoType = {
-    add: PropTypes.func.isRequired
+    add: PropTypes.func.isRequired,
+    length: PropTypes.number.isRequired
 }
 
 export default TaskForm;
