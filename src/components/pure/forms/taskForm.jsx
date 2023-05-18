@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { LEVELS } from '../../../models/levels.enum';
-import { Task } from '../../../models/tast.class';
+import { Task } from '../../../models/task.class';
 
 const TaskForm = ({add}) => {
 
