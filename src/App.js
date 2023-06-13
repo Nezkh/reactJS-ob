@@ -10,6 +10,9 @@ import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
+import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
+import TaskFormik from './components/pure/forms/taskFormik';
 
 function App() {
   return (
@@ -48,8 +51,16 @@ function App() {
           {/* Ejemplos de Renderizados Condicional */}
           {/* <OptionalRender></OptionalRender> */}
 
+          {/* Ejemplos de uso de Formik e YUP */}
+          {/* <LoginFormik></LoginFormik> */}
+          {/* <RegisterFormik></RegisterFormik> */}
+
           {/* Proyecto Final */}
-          <TaskListComponent></TaskListComponent>
+          {/* <TaskListComponent></TaskListComponent> */}
+
+          {/* Ejercicio 5 formulario de tareas */}
+          <TaskFormik></TaskFormik>
+          
       {/* </header> */}
     </div>
   );
